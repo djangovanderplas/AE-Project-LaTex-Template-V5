@@ -1,0 +1,68 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print table with names and student numbers
+\setlength\extrarowheight{2pt}
+\begin{tabular}{lll}
+    Student Name &Task&Student Number \\\hline
+    Dionysios Angelopoulos & Task & 5500230 \\
+    Django van der Plas & Task & 5556465 \\
+    Elles Yang & Task & 5548152 \\
+    Julan Wardenier & Task & 5314534 \\
+    Kasper Weel & Task & 5523648 \\
+    Luca Lizza & Task & 5471974 \\
+    Paulina Dabrowska & Task & 5459281 \\
+    Razvan Herşcovici & Task & 5560217 \\
+    Roos Meijndert & Task & 5517249 \\
+    Tim Guezen & Task & 5565448 \\
+\end{tabular}
+
+\vfill
+
+%% Print some more information at the bottom
+\begin{tabular}{ll}
+    Mentor: & Jan Post \\
+    Institution: & Delft University of Technology \\
+    Place: & Faculty of Aerospace Engineering, Delft \\
+\end{tabular}
+
+\vspace{1cm} 
+\small{Cover Image: Rocket Lab Electron, 2021, Dylan Semrau}
+
+\end{center}
+
+%% Insert the TU Delft logo at the bottom of the page
+\begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.south)[anchor=south,inner sep=10pt]{
+        \includegraphics{layout/tudelft/logo-black}
+    };
+\end{tikzpicture}
+
+\end{titlepage}

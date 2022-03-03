@@ -1,0 +1,61 @@
+\documentclass{layout/tudelft-report}
+%%%%% Preamble %%%%%
+% Template V5 created on 3-3-22
+%%% Credits %%
+%Original template by Daan Zwaneveld - https://dzwaneveld.github.io/
+%Adopted for AE projects by Django van der Plas - https://github.com/djangovanderplas/
+
+%%% Packages %%%
+% Setting up the AIAA Bibliography using NatBib
+\usepackage[square,numbers]{natbib} % Set up NatBib Package
+\bibliographystyle{new-aiaa} % Set up the AIAA Style
+
+% Add Additional packages here, please add a comment with the function of the package, try to minimize the use of packages.
+\usepackage[none]{hyphenat} % Disables word breaking
+
+% Additional commands to get shit working
+\renewcommand{\deg}{\si{\degree}\xspace}
+\graphicspath{/figures}
+\usepackage{subfiles} %Should be last in the preamble
+
+%%%%% Begin of document %%%%%
+\begin{document}
+
+%% Numbers on the bottomside
+\frontmatter
+
+%% Defining the main parameters
+\title{Literature Search Report}
+\subtitle{31th of February, 2022}
+\author{Group E02G}
+\subject{Design \& Construction: Compression Panel}
+\coverimage{figures/covers/cover1} % Choose cover image, aspect ratio of 2:3 
+\definecolor{title}{HTML}{6a9fba} % Color for the title, use color picker in Photoshop for example for the Hexacode
+
+%%%%% Frontmatter %%%%%
+\makecover %generate frontpage (kinda important so pls dont touch)
+\subfile{frontmatter/title} % second page with names and task devision
+
+\tableofcontents
+
+%%%%% Mainmatter %%%%%
+%% Arabic numerals
+\mainmatter
+%%%%% Chapters %%%
+%just import your chapters here
+\subfile{mainmatter/chapter-1}
+\subfile{mainmatter/chapter-2}
+%\subfile{mainmatter/chapter-3}
+
+
+%%%%%%% Bibliography %%%%%%%%%
+\bibliography{bibliography} %add the bibliography from the report.bib
+
+
+%% Appendices
+\begin{appendices}  
+\subfile{appendix/appendix-a}
+\end{appendices}
+
+
+\end{document}
